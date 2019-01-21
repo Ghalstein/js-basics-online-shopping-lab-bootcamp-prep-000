@@ -39,7 +39,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-for(let i = 0; i<cart.length; i++){
+for(var i = 0; i<cart.length; i++){
   if(item == Object.keys(cart[i])){
     cart = [...cart.slice(0,i), ...cart.slice(i+1)];
     return cart;
