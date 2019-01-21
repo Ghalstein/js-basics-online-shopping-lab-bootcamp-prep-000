@@ -40,12 +40,8 @@ function total() {
 
 function removeFromCart(item) {
 for(let i = 0; i<cart.length; i++){
-  if(item===cart[i].itemName){
-<<<<<<< HEAD
-    cart.splice(i,1);
-=======
-    cart.splice(i+1,1);
->>>>>>> 521ab2e8484767d3a9370e91f81bd24b21c6979a
+  if(item == Object.keys(cart[i])){
+    cart = [...cart.slice(0,i), ...cart.slice(i+1)];
     return cart;
   }else{
     i++;
